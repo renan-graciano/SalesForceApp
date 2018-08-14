@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iterative.Infra</name>
+    </assembly>
+    <members>
+        <member name="M:Iterative.Infra.Extensions.StringExtension.RemoverMascaras(System.String)">
+            <summary>
+            Funciona para CPF, CNPJ e Placa
+            </summary>
+            <param name="documento">Documento a que terá a formatação removida</param>
+            <returns>Documento sem formatação</returns>
+        </member>
+    </members>
+</doc>
