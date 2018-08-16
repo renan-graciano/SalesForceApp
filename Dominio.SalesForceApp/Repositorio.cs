@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio.SalesForceApp.Entidade;
 using NHibernate;
+using NHibernate.Linq;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
 
@@ -28,27 +29,87 @@ namespace Dominio.SalesForceApp
 
         public void Alterar(T entidade)
         {
-            throw new NotImplementedException();
+            using(ISession session = SessionConn.AbrirSession())
+            {
+                using(ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.Update(entidade);
+                        transacao.Commit();
+                    }
+                    catch(Exception ex)
+                    {
+                        if(!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao alterar entidade: " + ex.Message);
+                    }
+                }
+            }
         }
 
         public void Excluir(T entidade)
         {
-            throw new NotImplementedException();
+            using(ISession session = SessionConn.AbrirSession())
+            {
+                using(ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.Delete(entidade);
+                        transacao.Commit();
+                    }
+                    catch(Exception ex)
+                    {
+                        if(!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao excluir  entidade: " + ex.Message);
+                    }
+                }
+            }
         }
 
         public void Inserir(T entidade)
         {
-            throw new NotImplementedException();
+            using(ISession session = SessionConn.AbrirSession())
+            {
+                using(ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.Save(entidade);
+                        transacao.Commit();
+                    }
+                    catch(Exception ex)
+                    {
+                        if(!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao inserir entidade: " + ex.Message);
+                    }
+                }
+            }
         }
 
         public IList<T> Listar()
         {
-            throw new NotImplementedException();
+            using(ISession session = SessionConn.AbrirSession())
+            {
+                return (from x in session.Query<T>() select x).ToList();
+            }
         }
 
         public T Obter(int id)
         {
-            throw new NotImplementedException();
+            using(ISession session = SessionConn.AbrirSession())
+            {
+                return session.Get<T>(id);
+            }
         }
 
     }
