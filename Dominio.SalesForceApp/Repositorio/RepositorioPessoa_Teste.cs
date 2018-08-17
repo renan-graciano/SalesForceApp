@@ -18,7 +18,8 @@ namespace Dominio.SalesForceApp.Repositorio
                 SexoId = 1,
                 EnderecoId = 35,
                 Email = "teste@teste.com.br",
-                DataNascimento = DateTime.Now.AddYears(-20)
+                DataNascimento = DateTime.Now.AddYears(-20),
+                DataCriacao = DateTime.Now
             };
 
             Inserir(pessoa);

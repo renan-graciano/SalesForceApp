@@ -20,6 +20,7 @@ namespace Dominio.SalesForceApp.Entidade
         public virtual string Email { get; set; }
         public virtual DateTime? Deletado { get; set; }
         public virtual DateTime DataNascimento { get; set; }
+        public virtual DateTime DataCriacao { get; set; }
         public virtual DateTime? UltimaAtualizacao { get; set; }
         public virtual string UsuarioUltimaAtualizacao { get; set; }
         public virtual string IdSalesForce { get; set; }

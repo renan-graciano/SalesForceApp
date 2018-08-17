@@ -20,6 +20,7 @@ namespace Dominio.SalesForceApp.Map
             Map(c => c.Email).Not.Nullable();
             Map(c => c.Deletado);
             Map(c => c.DataNascimento).Not.Nullable();
+            Map(c => c.DataCriacao).Not.Nullable();
             Map(c => c.UltimaAtualizacao).Nullable();
             Map(c => c.UsuarioUltimaAtualizacao).Nullable();
             Map(c => c.IdSalesForce).Nullable();
