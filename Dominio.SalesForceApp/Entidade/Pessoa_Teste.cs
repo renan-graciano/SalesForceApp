@@ -31,23 +31,7 @@ namespace Dominio.SalesForceApp.Entidade
 
         }
 
-        public void IncluirPessoa()
-        {
-            var pessoa = new Pessoa_Teste(){ Nome="Teste Renan",
-            Cpf = "87261797251",
-            SexoId = 1,
-            EnderecoId = 35,
-            Email = "teste@teste.com.br",
-            DataNascimento = DateTime.Now.AddYears(-20)
-            };
 
-            
-        }
-
-        public void AlterarPessoa(int id)
-        {
-
-        }
 
     }
 

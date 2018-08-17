@@ -1,7 +1,0 @@
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\bin\Debug\SalesForceApp.exe.config
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\bin\Debug\SalesForceApp.exe
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\bin\Debug\SalesForceApp.pdb
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\obj\Debug\SalesForceApp.csprojAssemblyReference.cache
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\obj\Debug\SalesForceApp.csproj.CoreCompileInputs.cache
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\obj\Debug\SalesForceApp.exe
-c:\users\rgcarneiro\source\repos\SalesForceApp\SalesForceApp\obj\Debug\SalesForceApp.pdb

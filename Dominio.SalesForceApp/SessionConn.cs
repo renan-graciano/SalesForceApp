@@ -30,7 +30,7 @@ namespace Dominio.SalesForceApp
 
         public static ISession AbrirSession()
         {
-            return session.OpenSession();
+            return CriarSession().OpenSession();
         }
     }
 }

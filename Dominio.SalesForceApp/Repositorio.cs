@@ -8,14 +8,13 @@ using NHibernate;
 using NHibernate.Linq;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
+using Dominio.SalesForceApp.Contratos;
 
 namespace Dominio.SalesForceApp
 {
     public class Repositorio<T> : IRepositorio<T>
     {
         private Configuration _configuration;
-        private ISessionFactory _sessionFactory;
-        private ISession _session;
         
 
         public Repositorio()
