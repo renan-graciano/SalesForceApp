@@ -13,16 +13,17 @@ namespace Dominio.SalesForceApp.Map
         public Pessoa_TesteMap()
         {
             Id(c => c.Id);
-            Map(c => c.Cpf);
-            Map(c => c.SexoId);
-            Map(c => c.EnderecoId);
-            Map(c => c.Email);
+            Map(c => c.Nome).Not.Nullable();
+            Map(c => c.Cpf).Not.Nullable();
+            Map(c => c.SexoId).Not.Nullable();
+            Map(c => c.EnderecoId).Not.Nullable();
+            Map(c => c.Email).Not.Nullable();
             Map(c => c.Deletado);
-            Map(c => c.DataNascimento);
-            Map(c => c.UltimaAtualizacao);
-            Map(c => c.UsuarioUltimaAtualizacao);
-            Map(c => c.IdSalesForce);
-            Map(c => c.IdSalesForceContatoRelacionado);
+            Map(c => c.DataNascimento).Not.Nullable();
+            Map(c => c.UltimaAtualizacao).Nullable();
+            Map(c => c.UsuarioUltimaAtualizacao).Nullable();
+            Map(c => c.IdSalesForce).Nullable();
+            Map(c => c.IdSalesForceContatoRelacionado).Nullable();
 
             Table("Pessoa_Teste");
         }

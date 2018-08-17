@@ -17,14 +17,14 @@ namespace Dominio.SalesForceApp
         private Configuration _configuration;
         
 
-        public Repositorio()
-        {
-            _configuration = new Configuration();
-            _configuration.Configure();
-            var mapper = new ModelMapper();
-            mapper.AddMapping(typeof(Pessoa_Teste));
-            _configuration.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-        }
+        //public Repositorio()
+        //{
+        //    _configuration = new Configuration();
+        //    _configuration.Configure();
+        //    var mapper = new ModelMapper();
+        //    mapper.AddMapping(typeof(Pessoa_Teste));
+        //    _configuration.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
+        //}
 
         public void Alterar(T entidade)
         {
