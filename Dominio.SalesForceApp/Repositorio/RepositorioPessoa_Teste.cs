@@ -9,11 +9,13 @@ namespace Dominio.SalesForceApp.Repositorio
 {
     public class RepositorioPessoa_Teste : Repositorio<Pessoa_Teste>
     {
+        Random random = new Random();
+
         public void Incluir()
         {
             var pessoa = new Pessoa_Teste()
             {
-                Nome = "Teste Renan",
+                Nome = "Teste Renan" + random.Next(),
                 Cpf = "87261797251",
                 SexoId = 1,
                 EnderecoId = 35,
@@ -25,10 +27,10 @@ namespace Dominio.SalesForceApp.Repositorio
             Inserir(pessoa);
         }
 
-        public void Atualizar(int id)
+        public void Atualizar()
         {
-            var random = new Random();
-            var pessoaRetorno = Obter(id);
+            
+            var pessoaRetorno = Listar().LastOrDefault();
 
             pessoaRetorno.Nome = "Teste Renan" + random.Next();
             Alterar(pessoaRetorno);

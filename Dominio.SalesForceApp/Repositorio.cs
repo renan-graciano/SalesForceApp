@@ -1,30 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dominio.SalesForceApp.Entidade;
 using NHibernate;
-using NHibernate.Linq;
-using NHibernate.Cfg;
-using NHibernate.Mapping.ByCode;
 using Dominio.SalesForceApp.Contratos;
 
 namespace Dominio.SalesForceApp
 {
     public class Repositorio<T> : IRepositorio<T>
-    {
-        private Configuration _configuration;
-        
-
-        //public Repositorio()
-        //{
-        //    _configuration = new Configuration();
-        //    _configuration.Configure();
-        //    var mapper = new ModelMapper();
-        //    mapper.AddMapping(typeof(Pessoa_Teste));
-        //    _configuration.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-        //}
+    {      
 
         public void Alterar(T entidade)
         {
