@@ -2,11 +2,9 @@
 
 namespace Dominio.SalesForceApp.Contratos
 {
-    public interface IRepositorioPessoa_Teste: IRepositorio<Pessoa_Teste>
+    public interface IRepositorioPesoValor: IRepositorio<PesoValor>
     {
         void Incluir();
         void Atualizar();
-        
-
     }
 }

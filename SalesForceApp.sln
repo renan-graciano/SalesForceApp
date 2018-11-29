@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesForceApp", "SalesForce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.SalesForceApp", "Dominio.SalesForceApp\Dominio.SalesForceApp.csproj", "{A8E4648A-B50B-47B7-B838-37035209A824}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaixaCEP", "FaixaCEP\FaixaCEP.csproj", "{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{A8E4648A-B50B-47B7-B838-37035209A824}.QA|Any CPU.Build.0 = QA|Any CPU
 		{A8E4648A-B50B-47B7-B838-37035209A824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E4648A-B50B-47B7-B838-37035209A824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.HML2|Any CPU.ActiveCfg = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.HML2|Any CPU.Build.0 = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.QA|Any CPU.Build.0 = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50AD33B7-5F18-4083-9E81-FF68CA4DC9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

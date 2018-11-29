@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
 using Dominio.SalesForceApp.Contratos;
+using System.Linq.Expressions;
 
 namespace Dominio.SalesForceApp
 {
@@ -78,11 +79,20 @@ namespace Dominio.SalesForceApp
             }
         }
 
+
         public IList<T> Listar()
         {
             using(ISession session = SessionConn.AbrirSession())
             {
                 return (from x in session.Query<T>() select x).ToList();
+            }
+        }
+
+        public virtual IQueryable<T> Listar(Expression<Func<T, bool>> restriction)
+        {
+            using (ISession session = SessionConn.AbrirSession())
+            {
+                return session.Query<T>().Where(restriction);
             }
         }
 

@@ -23,7 +23,7 @@ namespace Dominio.SalesForceApp
                 return session;
 
             IPersistenceConfigurer configDb = MsSqlConfiguration.MsSql2008.ConnectionString(ConnectionString);
-            var configMap = Fluently.Configure().Database(configDb).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Map.Pessoa_TesteMap>());
+            var configMap = Fluently.Configure().Database(configDb).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Map.AreaCoberturaMap>());
             session = configMap.BuildSessionFactory();
             return session;
         }
